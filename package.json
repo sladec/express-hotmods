@@ -1,0 +1,17 @@
+{
+  "name": "express-hotmods",
+  "version": "1.0.0",
+  "description": "Reload and use new modules without restarting Express.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Express",
+    "modules",
+    "middleware",
+    "reload"
+  ],
+  "author": "Slade Colling",
+  "license": "MIT"
+}

@@ -1,0 +1,31 @@
+
+body {
+    font-family: "Courier New", Courier, monospace;
+}
+
+
+div {
+    height: 25px;
+}
+
+.mod{
+    padding-left: 10px;
+    background-color: #555;
+    color: #fff;
+    height: 30px;
+    line-height: 30px;
+    font-size: 18px;
+}
+
+.sub {
+    padding-left: 30px;
+    height: 28px;
+    line-height: 28px;
+    font-size: 14px;
+    color: #333;
+}
+
+.sub:nth-child(odd){
+    background-color: #eee;
+    
+}
