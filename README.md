@@ -38,14 +38,13 @@ example express app
 ```js
 app.use('/api', require('express-hotmods')(__dirname + '/api', '_reload'));
 ```
-##### http://my_express_server.com/api/my_module?_reload
+###### http://my_express_server.com/api/my_module?_reload
 The module name is called directly in url (- .js)
 
 #### Call function endpoints in modules:
-##### http://my_express_server.com/api/another_module/_function1?_reload
+###### http://my_express_server.com/api/another_module/_function1?_reload
 If the last path item starts with '_' **express-hotmods** will attempt to call _function_ name.
 
-in module
 in *another_module.js*
 ```js
 module.exports = {
