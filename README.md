@@ -2,8 +2,8 @@
 
 ### Automatically reload your express modules with a keyword parameter in url. 
 
-One thing i enjoyed about PHP was the abillity to edit a .php script and just reload the web page to see changes.
-Now with express-hotmods you can reload your modules and thier child modules by adding a keyword parameter to your urls while you are developing.
+One thing i enjoyed about PHP was the ability to edit a .php script and just reload the web page to see changes.
+Now with express-hotmods you can reload your modules and their child modules by adding a keyword parameter to your urls while you are developing.
 ##### http://my_express_server.com/path/to/module?some_param=value&_reload
 
 ### Installation:
@@ -67,7 +67,6 @@ function function2(req,res){
 ##### Note
 Use of `setInterval` in a module gets loaded in the global space and does not get destroyed on reload, so you will end up with multiple `setInterval` running after each reloading, so not recommended at the moment, unless I can figure out how to control them.
 ##### TODO
- - Finish renedering a module usage viewer if you hit http://my_express_server.com/folder/ 
+ - Finish rendering a module usage viewer if you hit http://my_express_server.com/folder/ 
  - Node does not seem to list child modules correctly in *Modules* object  if another module has already loaded same child module  
-This is my first published npm module, so any pointers or improvements would be appriciated. 
-
+This is my first published npm module, so any pointers or improvements would be appreciated. 
