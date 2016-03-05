@@ -14,7 +14,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https: //github.com/sladec/express-hotmods.git"
+    "url": "https://github.com/sladec/express-hotmods.git"
   },
   "author": "Slade Colling <sladecolling@gmail.com>",
   "license": "MIT"
