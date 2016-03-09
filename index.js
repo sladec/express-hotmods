@@ -1,8 +1,4 @@
 'use strict';
-/*global __log*/
-
-//var $path;
-//var $keyword;
 
 exports = module.exports = hotmods;
 var util = require("util");
@@ -26,10 +22,8 @@ function hotmods(path, keyword)
 		}
 
 		var url = url_to_object(req.path); //returns {mod : "", func: ""} 
-		__log(url);
 
 		var mod_name = $path + url.mod + ".js";
-		console.log("mod=" + mod_name);
 		try
 		{
 
@@ -62,7 +56,6 @@ function hotmods(path, keyword)
 		catch(e)
 		{
 			console.log(e);
-			//TODO if module does not exist but is in module.children then cleanup.
 			next(e);
 		};
 
@@ -115,14 +108,12 @@ function module_unload_children(arr)
 
 function module_child_clean_up(mod)
 {
-
 	//loop thru all direct children and cleanup orphens
 	var ch = mod.children;
 	for(var i in ch)
 	{
 		if(ch[i].loaded == false || !is_file(ch[i].id))
 		{
-			__log("CLEAN UP");
 			module_unload_children(ch[i].children);
 			delete require.cache[ch[i].id];
 			ch[i] = null;
@@ -158,12 +149,8 @@ function info(ch)
 
 
 	}
-
-	//	__log(out);
 	out += "</body>";
 	return out;
-
-
 }
 
 function get_last(path)
@@ -180,7 +167,6 @@ function get_children(mod)
 		//	out.push(get_last(mod[i].id));
 		out.push(mod[i].id);
 	}
-
 	return out;
 }
 
@@ -205,7 +191,6 @@ function file_get_contents(f)
 
 function is_file(path)
 {
-
 	var fs = require('fs');
 	try
 	{
